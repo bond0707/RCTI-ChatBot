@@ -1,0 +1,9 @@
+json
+random
+spacy
+subprocess
+scikit-learn
+matplotlib
+streamlit
+g4f
+torch
