@@ -7,8 +7,6 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
 import matplotlib.pyplot as plt
 
-subprocess.run(['python', '-m', 'spacy', 'download', 'en_core_web_sm'])
-
 class DataSelector():
     def __init__(self, knowledgebase_files, similarity_threshold=0.3):
         self.knowledgebase = self.load_knowledgebase(knowledgebase_files)
