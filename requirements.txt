@@ -1,5 +1,5 @@
 spacy==3.7.6
-https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.0.0/en_core_web_sm-3.0.0.tar.gz
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1.tar.gz
 scikit-learn==1.5.2
 matplotlib==3.9.2
 streamlit==1.39.0
