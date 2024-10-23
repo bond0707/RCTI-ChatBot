@@ -1,6 +1,7 @@
+import os
 import json
-import random
 import spacy
+import random
 import subprocess
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -48,7 +49,7 @@ class DataSelector():
 
 if __name__ == "__main__":
     knowledgebase_files = [
-        "Data Pre-processing\\jsonlines_ds\\RCTI-Basic.jsonl",
+        os.path.join(os.path.dirname(__file__), "Data Pre-processing", "jsonlines_ds", "RCTI-Basic.jsonl"),
     ]
     data_selector = DataSelector(knowledgebase_files)
 
