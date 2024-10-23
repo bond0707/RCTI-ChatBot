@@ -1,9 +1,8 @@
-json
-random
-spacy
-subprocess
-scikit-learn
-matplotlib
-streamlit
-g4f
-torch
+spacy==2.6
+scikit-learn==1.5.2
+matplotlib==3.9.2
+streamlit==1.39.0
+g4f==0.3.2.9
+torch==2.4.1+cu118
+torchaudio==2.4.1+cu118
+torchvision==0.19.1+cu118
