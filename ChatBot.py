@@ -10,7 +10,7 @@ if __name__ == "__main__":
     )
     st.title("RC Bot - The RCTI Chatbot")
     
-    selector = DataSelector(["Data Pre-processing\\jsonlines_ds\\RCTI-Basic.jsonl"])
+    selector = DataSelector([os.path.join(os.path.dirname(__file__), "Data Pre-processing", "jsonlines_ds", "RCTI-Basic.jsonl")])
     formatter = DataFormatter()
     
     if "messages" not in st.session_state:
