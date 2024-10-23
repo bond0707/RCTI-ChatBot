@@ -23,14 +23,14 @@ class DataFormatter:
                 "content": self.system_context
             }
         ]
-        model_path = "models/fine_tuned_models/RCTI_flan_t5_large_2e_qa"
-        self.tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-large", clean_up_tokenization_spaces=True)
-        self.tokenizer_max_length = 512
-        self.model = AutoModelForSeq2SeqLM.from_pretrained(
-            model_path,
-            local_files_only=True,
-            device_map="cuda",
-        ).to("cuda")
+        # model_path = "models/fine_tuned_models/RCTI_flan_t5_large_2e_qa"
+        # self.tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-large", clean_up_tokenization_spaces=True)
+        # self.tokenizer_max_length = 512
+        # self.model = AutoModelForSeq2SeqLM.from_pretrained(
+        #     model_path,
+        #     local_files_only=True,
+        #     device_map="cuda",
+        # ).to("cuda")
         self.client = g4f.client.Client(
             provider=RetryProvider([DDG, Koala, You])
         )
@@ -41,20 +41,20 @@ class DataFormatter:
             content += f"{index}. {context}\n"
         self.messages.append({"role": "user", "content": content})
 
-    def get_model_completions(self, max_input_tokens=512, max_output_tokens=512):
-        self.tokenizer.pad_token = self.tokenizer.eos_token
-        print(self.messages)
-        tokenized_inputs = self.tokenizer(
-            [msg["content"] for msg in self.messages],
-            return_tensors="pt",
-            padding=True,
-            truncation=True,
-            max_length=self.tokenizer_max_length
-        ).to("cuda")
+    # def get_model_completions(self, max_input_tokens=512, max_output_tokens=512):
+    #     self.tokenizer.pad_token = self.tokenizer.eos_token
+    #     print(self.messages)
+    #     tokenized_inputs = self.tokenizer(
+    #         [msg["content"] for msg in self.messages],
+    #         return_tensors="pt",
+    #         padding=True,
+    #         truncation=True,
+    #         max_length=self.tokenizer_max_length
+    #     ).to("cuda")
 
-        tokens = self.model.generate(**tokenized_inputs, max_length=max_output_tokens)
-        response = self.tokenizer.decode(tokens[0], skip_special_tokens=True)
-        return response
+    #     tokens = self.model.generate(**tokenized_inputs, max_length=max_output_tokens)
+    #     response = self.tokenizer.decode(tokens[0], skip_special_tokens=True)
+    #     return response
 
     def get_g4f_completions(self):
         chat = self.client.chat.completions.create(
