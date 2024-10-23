@@ -4,3 +4,4 @@ matplotlib==3.9.2
 streamlit==1.39.0
 g4f==0.3.2.9
 torch==2.4.1
+curl_cffi==0.7.2
