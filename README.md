@@ -22,7 +22,7 @@ This chatbot is essentially an expert system whose domain is R.C.T.I., its stand
 
 ## The Knowledgebase
 
-The project uses a custom-made dataset in a JSONLines file. Each object in the file has a "question" and an "answer" key. The question key follows a template to make it easy for the model to identify questions. Here’s an example of the format used:
+The project uses a custom-made dataset in a JSONLines file. Each object in the file has a `question` and an `answer` key. The `question` key follows a template to make it easy for the model to identify questions. Here’s an example of the format used:
 
 ```json
 {   
