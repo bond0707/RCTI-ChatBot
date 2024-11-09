@@ -26,8 +26,7 @@ The project uses a custom-made dataset in a JSONLines file. Each object in the f
 
 ```json
 {   
-"question": """### Question: “Your Question  
-             Here” \n\n\n###Answer: \n""", 
+"question": "### Question: “Your Question Here” \n\n\n###Answer: \n", 
  
 "answer": "Your Answer Here" 
 }
