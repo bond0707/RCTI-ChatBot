@@ -1,6 +1,6 @@
-# R.C.T.I. chatbot
+# R.C.T.I. Chatbot
 
-This project presents a chatbot for students and staff at R.C. Technical Institute. It uses an LLM trained with the custom R.C.T.I. dataset to answer questions related to the college, such as department heads, fee payment procedures, result viewing, class coordinators, and faculty contacts. The chatbot aims to make it easier to access important information and improve the overall user experience at the college. It is deployed [here.](https://rcti-chatbot.streamlit.app/ "RCTI chatbot")
+This project presents a chatbot for students and staff at R.C. Technical Institute. It uses an LLM trained with the custom R.C.T.I. dataset to answer questions related to the college, such as department heads, fee payment procedures, result viewing, class coordinators, and faculty contacts. The chatbot aims to make it easier to access important information and improve the overall user experience at the college. This is my microproject for `FAI` and `IML`. It is deployed [here.](https://rcti-chatbot.streamlit.app/ "RCTI chatbot")
 
 ## Project Features
 
